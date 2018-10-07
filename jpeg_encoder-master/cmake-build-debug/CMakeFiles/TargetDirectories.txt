@@ -1,0 +1,3 @@
+/Volumes/D/软微课程作业/数字图像处理/1/jpeg_encoder-master/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/Volumes/D/软微课程作业/数字图像处理/1/jpeg_encoder-master/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Volumes/D/软微课程作业/数字图像处理/1/jpeg_encoder-master/cmake-build-debug/CMakeFiles/jpeg_encoder_master.dir
