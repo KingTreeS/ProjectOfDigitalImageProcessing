@@ -61,6 +61,8 @@ typedef struct tagRGBQUAD {
 } rgbq;
 #pragma pack()
 
+#define getLineBytes(biWidth, biBitCount) (biWidth * biBitCount / 8 + 3) / 4 * 4;
+
 int main() {
 	// 读取和写入文件信息
 	// 哆来A梦图片，1733*1083
@@ -102,12 +104,13 @@ int main() {
 			fread(fi, sizeof(fileInfo), 1, fpBMP);
 			// long oldBiWidth = fi->biWidth;
 			// 计算原本的彩色图，每个扫描行所占的字节数
-			long oldBiWidth = (fi->biWidth * fi->biBitCount / 8 + 3) / 4 * 4;
-			
+			// long oldBiWidth = (fi->biWidth * fi->biBitCount / 8 + 3) / 4 * 4;
+			long oldBiWidth = getLineBytes(fi->biWidth, fi->biBitCount);
 			// 修改BMP文件头
 			fi->biBitCount = 8;
 			// 计算转化后的灰度图，每个扫描行所占字节数
-			long newBiWidth = (fi->biWidth * fi->biBitCount / 8 + 3) / 4 * 4;
+			// long newBiWidth = (fi->biWidth * fi->biBitCount / 8 + 3) / 4 * 4;
+			long newBiWidth = getLineBytes(fi->biWidth, fi->biBitCount);
 			fi->biSizeImage = newBiWidth * fi->biHeight;
 			// 修改图片像素宽度（无必要）
 			// fi->biWidth = newBiWidth;
