@@ -1,3 +1,0 @@
-/Volumes/D/CLionProject/CPractice/RGBToGray/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-/Volumes/D/CLionProject/CPractice/RGBToGray/cmake-build-debug/CMakeFiles/edit_cache.dir
-/Volumes/D/CLionProject/CPractice/RGBToGray/cmake-build-debug/CMakeFiles/RGBToGray.dir
